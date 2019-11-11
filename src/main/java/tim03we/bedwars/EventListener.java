@@ -18,22 +18,13 @@ package tim03we.bedwars;
  * <https://opensource.org/licenses/GPL-3.0>.
  */
 
-import cn.nukkit.plugin.PluginBase;
-import tim03we.bedwars.commands.SetupCommand;
+import cn.nukkit.event.Listener;
 
-public class Bedwars extends PluginBase {
+public class EventListener implements Listener {
 
-    @Override
-    public void onLoad() {
-    }
+    private Bedwars plugin;
 
-    @Override
-    public void onEnable() {
-        this.register();
-    }
-
-    private void register() {
-        this.getServer().getPluginManager().registerEvents(new EventListener(this), this);
-        getServer().getCommandMap().register("setup", new SetupCommand(this));
+    EventListener(Bedwars plugin) {
+        this.plugin = plugin;
     }
 }

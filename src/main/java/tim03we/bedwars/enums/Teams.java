@@ -1,4 +1,4 @@
-package tim03we.bedwars;
+package tim03we.bedwars.enums;
 
 /*
  * Copyright (c) 2019 tim03we  < https://github.com/tim03we >
@@ -18,22 +18,16 @@ package tim03we.bedwars;
  * <https://opensource.org/licenses/GPL-3.0>.
  */
 
-import cn.nukkit.plugin.PluginBase;
-import tim03we.bedwars.commands.SetupCommand;
+import java.util.HashMap;
 
-public class Bedwars extends PluginBase {
+public class Teams {
 
-    @Override
-    public void onLoad() {
-    }
-
-    @Override
-    public void onEnable() {
-        this.register();
-    }
-
-    private void register() {
-        this.getServer().getPluginManager().registerEvents(new EventListener(this), this);
-        getServer().getCommandMap().register("setup", new SetupCommand(this));
-    }
+    public static HashMap<String, String> RED = new HashMap<String, String>();
+    public static HashMap<String, String> GREEN = new HashMap<String, String>();
+    public static HashMap<String, String> YELLOW = new HashMap<String, String>();
+    public static HashMap<String, String> BLUE = new HashMap<String, String>();
+    public static HashMap<String, String> PINK = new HashMap<String, String>();
+    public static HashMap<String, String> BLACK = new HashMap<String, String>();
+    public static HashMap<String, String> AQUA = new HashMap<String, String>();
+    public static HashMap<String, String> DARK_GREEN = new HashMap<String, String>();
 }

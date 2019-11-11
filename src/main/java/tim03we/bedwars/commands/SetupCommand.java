@@ -1,4 +1,4 @@
-package tim03we.bedwars;
+package tim03we.bedwars.commands;
 
 /*
  * Copyright (c) 2019 tim03we  < https://github.com/tim03we >
@@ -18,22 +18,24 @@ package tim03we.bedwars;
  * <https://opensource.org/licenses/GPL-3.0>.
  */
 
-import cn.nukkit.plugin.PluginBase;
-import tim03we.bedwars.commands.SetupCommand;
+import cn.nukkit.command.Command;
+import cn.nukkit.command.CommandSender;
+import tim03we.bedwars.Bedwars;
 
-public class Bedwars extends PluginBase {
+public class SetupCommand extends Command {
 
-    @Override
-    public void onLoad() {
+    private Bedwars plugin;
+
+    public SetupCommand(Bedwars plugin) {
+        super("setup", "Bedwars Command");
+        this.plugin = plugin;
     }
 
     @Override
-    public void onEnable() {
-        this.register();
-    }
-
-    private void register() {
-        this.getServer().getPluginManager().registerEvents(new EventListener(this), this);
-        getServer().getCommandMap().register("setup", new SetupCommand(this));
+    public boolean execute(CommandSender sender, String s, String[] strings) {
+        if(!testPermission(sender)) {
+            return false;
+        }
+        return false;
     }
 }
