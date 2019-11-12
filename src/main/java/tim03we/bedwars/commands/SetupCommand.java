@@ -21,6 +21,7 @@ package tim03we.bedwars.commands;
 import cn.nukkit.command.Command;
 import cn.nukkit.command.CommandSender;
 import tim03we.bedwars.Bedwars;
+import tim03we.bedwars.Game;
 
 public class SetupCommand extends Command {
 
@@ -35,6 +36,12 @@ public class SetupCommand extends Command {
     public boolean execute(CommandSender sender, String s, String[] strings) {
         if(!testPermission(sender)) {
             return false;
+        }
+        if(Game.IN_SETUP) {
+            Game.IN_SETUP = false;
+            sender.sendMessage("");
+        } else {
+            Game.IN_SETUP = true;
         }
         return false;
     }

@@ -19,9 +19,16 @@ package tim03we.bedwars;
  */
 
 import cn.nukkit.plugin.PluginBase;
+import cn.nukkit.utils.Config;
 import tim03we.bedwars.commands.SetupCommand;
+import tim03we.bedwars.commands.test.SetBedCommand;
+import tim03we.bedwars.tasks.GameTask;
+import tim03we.bedwars.tasks.ShowDirectionTask;
+import tim03we.bedwars.tasks.SpawnTask;
 
 public class Bedwars extends PluginBase {
+
+    private Game game;
 
     @Override
     public void onLoad() {
@@ -29,11 +36,21 @@ public class Bedwars extends PluginBase {
 
     @Override
     public void onEnable() {
+        game = new Game(this);
         this.register();
+        this.game.loadSettings();
     }
 
     private void register() {
-        this.getServer().getPluginManager().registerEvents(new EventListener(this), this);
+        getServer().getPluginManager().registerEvents(new EventListener(this), this);
         getServer().getCommandMap().register("setup", new SetupCommand(this));
+        getServer().getCommandMap().register("setbed", new SetBedCommand());
+        getServer().getScheduler().scheduleRepeatingTask(new GameTask(this), 20);
+        getServer().getScheduler().scheduleRepeatingTask(new SpawnTask(this), 20);
+        getServer().getScheduler().scheduleRepeatingTask(new ShowDirectionTask(), 1);
+    }
+
+    public Config getSetupFile() {
+        return new Config(this.getDataFolder() + "./setup.yml", Config.YAML);
     }
 }

@@ -1,0 +1,50 @@
+---
+settings:
+  min_players: 0
+  max_players_team: 0
+  min_players_team: 0
+  countdown: 0
+  game_time: 0
+  world: ""
+teams:
+  red:
+    use: false
+    bed_location: ""
+    team_spawn: ""
+    direction: ""
+  blue:
+    use: false
+    bed_location: ""
+    team_spawn: ""
+    direction: ""
+  yellow:
+    use: false
+    bed_location: ""
+    team_spawn: ""
+    direction: ""
+  green:
+    use: false
+    bed_location: ""
+    team_spawn: ""
+    direction: ""
+  aqua:
+    use: false
+    bed_location: ""
+    team_spawn: ""
+    direction: ""
+  dark_queen:
+    use: false
+    bed_location: ""
+    team_spawn: ""
+    direction: ""
+  black:
+    use: false
+    bed_location: ""
+    team_spawn: ""
+    direction: ""
+  pink:
+    use: false
+    bed_location: ""
+    team_spawn: ""
+    direction: ""
+...

@@ -1,4 +1,4 @@
-package tim03we.bedwars;
+package tim03we.bedwars.tasks;
 
 /*
  * Copyright (c) 2019 tim03we  < https://github.com/tim03we >
@@ -18,39 +18,26 @@ package tim03we.bedwars;
  * <https://opensource.org/licenses/GPL-3.0>.
  */
 
-import cn.nukkit.Player;
-import cn.nukkit.event.EventHandler;
-import cn.nukkit.event.Listener;
-import cn.nukkit.event.block.BlockPlaceEvent;
-import cn.nukkit.event.player.PlayerJoinEvent;
-import cn.nukkit.event.player.PlayerLoginEvent;
-import cn.nukkit.event.player.PlayerQuitEvent;
+import cn.nukkit.scheduler.Task;
+import tim03we.bedwars.Bedwars;
+import tim03we.bedwars.Game;
 
-public class EventListener implements Listener {
+public class GameTask extends Task {
 
     private Bedwars plugin;
 
-    EventListener(Bedwars plugin) {
+    public GameTask(Bedwars plugin) {
         this.plugin = plugin;
     }
 
-    @EventHandler
-    public void onLogin(PlayerLoginEvent event) {
-        Player player = event.getPlayer();
-    }
+    @Override
+    public void onRun(int i) {
+        if(Game.STATUS_LOBBY) {
 
-    @EventHandler
-    public void onJoin(PlayerJoinEvent event) {
-        Player player = event.getPlayer();
-    }
+        } else if(Game.STATUS_STARTED) {
 
-    @EventHandler
-    public void onQuit(PlayerQuitEvent event) {
-        Player player = event.getPlayer();
-    }
+        } else if(Game.STATUS_END) {
 
-    @EventHandler
-    public void onPlace(BlockPlaceEvent event) {
-
+        }
     }
 }

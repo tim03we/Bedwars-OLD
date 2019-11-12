@@ -1,0 +1,11 @@
+tim03we\bedwars\EventListener.class
+tim03we\bedwars\enums\Teams.class
+tim03we\bedwars\tasks\MapResetTask.class
+tim03we\bedwars\commands\SetupCommand.class
+tim03we\bedwars\BungeeAPI.class
+tim03we\bedwars\Game.class
+tim03we\bedwars\tasks\GameTask.class
+tim03we\bedwars\Bedwars.class
+tim03we\bedwars\tasks\SpawnTask.class
+tim03we\bedwars\commands\test\SetBedCommand.class
+tim03we\bedwars\tasks\ShowDirectionTask.class

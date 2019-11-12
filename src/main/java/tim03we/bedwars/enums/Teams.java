@@ -18,6 +18,7 @@ package tim03we.bedwars.enums;
  * <https://opensource.org/licenses/GPL-3.0>.
  */
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Teams {
@@ -30,4 +31,13 @@ public class Teams {
     public static HashMap<String, String> BLACK = new HashMap<String, String>();
     public static HashMap<String, String> AQUA = new HashMap<String, String>();
     public static HashMap<String, String> DARK_GREEN = new HashMap<String, String>();
+
+    public static ArrayList<String> RED_PLAYERS = new ArrayList<String>();
+    public static ArrayList<String> GREEN_PLAYERS = new ArrayList<String>();
+    public static ArrayList<String> YELLOW_PLAYERS = new ArrayList<String>();
+    public static ArrayList<String> BLUE_PLAYERS = new ArrayList<String>();
+    public static ArrayList<String> PINK_PLAYERS = new ArrayList<String>();
+    public static ArrayList<String> BLACK_PLAYERS = new ArrayList<String>();
+    public static ArrayList<String> AQUA_PLAYERS = new ArrayList<String>();
+    public static ArrayList<String> DARK_QUEEN_PLAYERS = new ArrayList<String>();
 }
