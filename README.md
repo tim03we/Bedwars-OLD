@@ -1,2 +1,2 @@
 # Bedwars
-Test
+Test 2
