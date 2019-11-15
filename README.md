@@ -13,7 +13,7 @@ Coming...
 
 ## Servers using this Bedwars plugin?
 
-Maybe your server's right here.
+- the-programmers.de:19132
 
 ----------------------
 
